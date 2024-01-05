@@ -24,6 +24,7 @@ public class ServerImpl implements Server {
      */
     @Override
     public boolean saveDataEnvelope(DataEnvelope envelope) {
+    	
 
         // Save to persistence.
         persist(envelope);
