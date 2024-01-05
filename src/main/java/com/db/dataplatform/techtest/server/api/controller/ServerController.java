@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
+import com.google.gson.Gson;
 
 @Slf4j
 @Controller
@@ -26,9 +27,11 @@ public class ServerController {
     private final Server server;
 
     @PostMapping(value = "/pushdata", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Boolean> pushData(@Valid @RequestBody DataEnvelope dataEnvelope) throws IOException, NoSuchAlgorithmException {
-
-        log.info("Data envelope received: {}", dataEnvelope.getDataHeader().getName());
+    public ResponseEntity<Boolean> pushData(@RequestBody String dataEnvelopeJsonString) 
+    	throws IOException, NoSuchAlgorithmException {
+        log.info("Data envelope received: {}", dataEnvelopeJsonString);
+        Gson gson = new Gson();
+        DataEnvelope dataEnvelope = gson.fromJson(dataEnvelopeJsonString, DataEnvelope.class);
         boolean checksumPass = server.saveDataEnvelope(dataEnvelope);
 
         log.info("Data envelope persisted. Attribute name: {}", dataEnvelope.getDataHeader().getName());

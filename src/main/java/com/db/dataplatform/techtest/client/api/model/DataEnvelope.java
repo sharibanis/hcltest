@@ -18,4 +18,20 @@ public class DataEnvelope {
 
     @NotNull
     private DataBody dataBody;
+
+	public DataHeader getDataHeader() {
+		return dataHeader;
+	}
+
+	public void setDataHeader(DataHeader dataHeader) {
+		this.dataHeader = dataHeader;
+	}
+
+	public DataBody getDataBody() {
+		return dataBody;
+	}
+
+	public void setDataBody(DataBody dataBody) {
+		this.dataBody = dataBody;
+	}
 }

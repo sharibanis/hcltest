@@ -1,5 +1,7 @@
 package com.db.dataplatform.techtest.server.api.model;
 
+import com.db.dataplatform.techtest.client.api.model.DataBody;
+import com.db.dataplatform.techtest.client.api.model.DataHeader;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.AllArgsConstructor;
@@ -22,4 +24,20 @@ public class DataEnvelope {
 
     @NotNull
     private DataBody dataBody;
+    
+	public DataHeader getDataHeader() {
+		return dataHeader;
+	}
+
+	public void setDataHeader(DataHeader dataHeader) {
+		this.dataHeader = dataHeader;
+	}
+
+	public DataBody getDataBody() {
+		return dataBody;
+	}
+
+	public void setDataBody(DataBody dataBody) {
+		this.dataBody = dataBody;
+	}
 }

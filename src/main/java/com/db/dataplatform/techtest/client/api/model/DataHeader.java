@@ -20,4 +20,14 @@ public class DataHeader {
     @NotNull
     private final BlockTypeEnum blockType;
 
+	public String getName() {
+		return name;
+	}
+
+	public BlockTypeEnum getBlockType() {
+		return blockType;
+	}
+    
+    
+
 }
