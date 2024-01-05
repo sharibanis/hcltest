@@ -6,16 +6,28 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 import javax.validation.constraints.NotNull;
 
 @JsonSerialize(as = DataBody.class)
 @JsonDeserialize(as = DataBody.class)
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
-public class DataBody {
+public class DataBody implements Serializable {
 
     @NotNull
     private String dataBody;
+    
+    public DataBody(String dataBody) {
+    	this.dataBody = dataBody;
+    }
+
+	public String getDataBody() {
+		return dataBody;
+	}
+
+	public void setDataBody(String dataBody) {
+		this.dataBody = dataBody;
+	}
 
 }

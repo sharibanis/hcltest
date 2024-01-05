@@ -5,6 +5,8 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.io.Serializable;
+
 import javax.validation.constraints.NotNull;
 
 @JsonSerialize(as = DataEnvelope.class)

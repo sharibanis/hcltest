@@ -1,7 +1,7 @@
 package com.db.dataplatform.techtest.server.api.model;
 
-import com.db.dataplatform.techtest.client.api.model.DataBody;
-import com.db.dataplatform.techtest.client.api.model.DataHeader;
+import com.db.dataplatform.techtest.server.api.model.DataBody;
+import com.db.dataplatform.techtest.server.api.model.DataHeader;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import lombok.AllArgsConstructor;
