@@ -44,4 +44,70 @@ public class DataBodyEntity {
             createdTimestamp = Instant.now();
         }
     }
+
+    public Long getDataStoreId() {
+		return dataStoreId;
+	}
+
+
+	public void setDataStoreId(Long dataStoreId) {
+		this.dataStoreId = dataStoreId;
+	}
+
+
+	public DataHeaderEntity getDataHeaderEntity() {
+		return dataHeaderEntity;
+	}
+
+
+	public void setDataHeaderEntity(DataHeaderEntity dataHeaderEntity) {
+		this.dataHeaderEntity = dataHeaderEntity;
+	}
+
+
+	public String getDataBody() {
+		return dataBody;
+	}
+
+
+	public void setDataBody(String dataBody) {
+		this.dataBody = dataBody;
+	}
+
+
+	public Instant getCreatedTimestamp() {
+		return createdTimestamp;
+	}
+
+
+	public void setCreatedTimestamp(Instant createdTimestamp) {
+		this.createdTimestamp = createdTimestamp;
+	}
+
+
+	@Override
+    public boolean equals(Object obj) {
+         if (this == obj) {
+              return true;
+         }
+         if (obj == null) { 
+             return false;
+         }
+         if (getClass() != obj.getClass()) {
+              return false;
+         }
+         DataBodyEntity other = (DataBodyEntity) obj;
+         boolean equals = (this.dataHeaderEntity.getName().equals(other.getDataHeaderEntity().getName())
+        		 && this.dataHeaderEntity.getBlocktype().equals(other.getDataHeaderEntity().getBlocktype())
+        		 && this.getDataBody().equals(other.getDataBody())
+        		 );
+        		 
+         return equals;
+    }
+
+    @Override
+    public int hashCode() {
+        return dataStoreId.hashCode();
+    }    
+    
 }

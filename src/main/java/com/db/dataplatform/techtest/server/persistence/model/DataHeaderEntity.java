@@ -48,4 +48,38 @@ public class DataHeaderEntity {
             createdTimestamp = Instant.now();
         }
     }
+
+	public Long getDataHeaderId() {
+		return dataHeaderId;
+	}
+
+	public void setDataHeaderId(Long dataHeaderId) {
+		this.dataHeaderId = dataHeaderId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public BlockTypeEnum getBlocktype() {
+		return blocktype;
+	}
+
+	public void setBlocktype(BlockTypeEnum blocktype) {
+		this.blocktype = blocktype;
+	}
+
+	public Instant getCreatedTimestamp() {
+		return createdTimestamp;
+	}
+
+	public void setCreatedTimestamp(Instant createdTimestamp) {
+		this.createdTimestamp = createdTimestamp;
+	}
+    
+    
 }

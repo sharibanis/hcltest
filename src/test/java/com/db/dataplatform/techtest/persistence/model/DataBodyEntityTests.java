@@ -35,6 +35,7 @@ public class DataBodyEntityTests {
      */
     @Test
     public void checkTwoDataBodiesAreEqualAsExpected() {
+    	Instant instantNow = Instant.now();
 
         DataHeaderEntity dataHeaderEntity1 = new DataHeaderEntity();
         dataHeaderEntity1.setName(TEST_NAME);
